@@ -143,6 +143,13 @@
             color: #fff;
             text-decoration: underline;
         }
+
+        .error {
+      color: red;
+      text-align: left;
+      font-size: 11px;
+      font-family: Montserrat;
+   }
     </style>
 </head>
 
@@ -190,20 +197,20 @@
             <div class="card-body px-lg-5 pt-0">
 
                 <!-- Form -->
-                <form class="text-center" style="color: #757575;" id="demoForm">
+                <form class="text-center" style="color: #757575;" id="form" novalidate="novalidate" action="submit">
 
                     <div class="form-row">
                         <div class="col">
                             <!-- First name -->
                             <div class="input-field col s6" style="padding:0px;">
-                                <input id="first_name" type="text" class="validate">
-                                <label for="first_name" style="font-family: Montserrat;">First Name</label>
+                                <input id="fname" type="text" name ="fname" required="" aria-required="true">
+                                <label for="fname" style="font-family: Montserrat; display:flex;">First Name<p style="line-height: 20px;">*</p></label>
                             </div>
                         </div>
                         <div class="col">
                             <!-- Last name -->
                             <div class="input-field col s6" style="padding:0px;">
-                                <input id="last_name" type="text" class="validate">
+                                <input id="last_name" type="text">
                                 <label for="last_name" style="font-family: Montserrat;">Last Name</label>
                             </div>
                         </div>
@@ -211,20 +218,20 @@
 
                     <!-- E-mail -->
                     <div class="input-field col s12" style="padding:0px; margin:0px;">
-                        <input id="email" type="email" class="validate">
-                        <label for="email" style="font-family: Montserrat;">Email</label>
+                        <input id="cemail" type="email" name="cemail" required="" aria-required="true">
+                        <label for="email" style="font-family: Montserrat; display:flex;">Email<p style="line-height: 20px;">*</p></label>
                     </div>
 
                     <!-- Password -->
                     <div class="input-field col s12" style="padding:0px;">
-                        <input id="password" type="password" class="validate">
-                        <label for="password" style="font-family: Montserrat;">Password</label>
+                        <input id="password" type="password" name="password" required="" aria-required="true">
+                        <label for="password" style="font-family: Montserrat; display:flex;">Password<p style="line-height: 20px;">*</p></label>
                     </div>
 
                     <!-- Confirm Password -->
                     <div class="input-field col s12" style="padding:0px;">
-                        <input id="passwordConfirm" type="password" class="validate">
-                        <label for="passwordConfirm" style="font-family: Montserrat;">Confirm Password</label>
+                        <input id="cpassword" type="password" required="" name="cpassword" aria-required="true">
+                        <label for="cpassword" style="font-family: Montserrat; display:flex;">Confirm Password<p style="line-height: 20px;">*</p></label>
                     </div>
 
                     <!-- Sign up button -->
@@ -331,8 +338,6 @@
 
                         <!-- Modal footer -->
                         <div class="modal-footer" style="display: flex;">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                                style="margin-right:2%; background-color: #17A2B8; color: white; border:#17A2B8; border-width: 2px;">Login</button>
                             <button type="button" class="btn btn-secondary z-depth-2" data-dismiss="modal"
                                 style="background-color:#E73C7E; border:#E73C7E; border-width: 2px;">Close</button>
                         </div>
@@ -361,135 +366,72 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js'></script>
     <script src="js/index.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>4
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
     <script>
-        var button = document.querySelector("#button-a");
-        button.addEventListener("click", function(e){
-            e.preventDefault();
-            console.log("clicked")
-            parent.swal({
-            title: "Good job!",
-            text: "You",
-            icon: "success",
-            button: "OK",
-            });
-        });
-        
-    </script>
-    
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', function (e) {
-            FormValidation.formValidation(
-                document.getElementById('demoForm'), {
-                    fields: {
-                        name: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'The name is required'
-                                },
-                                stringLength: {
-                                    min: 6,
-                                    max: 30,
-                                    message: 'The name must be more than 6 and less than 30 characters long'
-                                },
-                                regexp: {
-                                    regexp: /^[a-zA-Z0-9_]+$/,
-                                    message: 'The name can only consist of alphabetical, number and underscore'
-                                }
-                            }
-                        },
-                        price: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'The price is required'
-                                },
-                                numeric: {
-                                    message: 'The price must be a number'
-                                }
-                            }
-                        },
-                        'size[]': {
-                            validators: {
-                                notEmpty: {
-                                    message: 'The size is required'
-                                }
-                            }
-                        },
-                        availability: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'The availability option is required'
-                                }
-                            }
-                        },
-                    },
-                    plugins: {
-                        trigger: new FormValidation.plugins.Trigger(),
-                        materialize: new FormValidation.plugins.Materialize(),
-                        submitButton: new FormValidation.plugins.SubmitButton(),
-                        icon: new FormValidation.plugins.Icon({
-                            valid: 'fa fa-check',
-                            invalid: 'fa fa-times',
-                            validating: 'fa fa-refresh',
-                        }),
-                    },
-                }
-            );
-        });
+        $("#form").validate({
+        rules: {
+            fname: {
+                required: true,
+                minlength: 5
+            },
+            cemail: {
+                required: true,
+                email:true
+            },
+            password: {
+				required: true,
+				minlength: 5
+			},
+			cpassword: {
+				required: true,
+				minlength: 5,
+				equalTo: "#password"
+			},
+        },
+        //For custom messages
+        messages: {
+            fname:{
+                required: "Please Enter a Name.",
+                minlength: "Enter at least 5 characters."
+            },
+            cemail:{
+                required: "Please Enter a Email Id."
+            },
+            password:{
+                required: "Please Enter a Password."
+            },
+            cpassword:{
+                required: "Please Enter a Password to confirm."
+            },
+        },
+        errorElement : 'div',
+        errorPlacement: function(error, element) {
+          var placement = $(element).data('error');
+          if (placement) {
+            $(placement).append(error)
+          } else {
+            error.insertAfter(element);
+          }
+        }
+     });
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', function (e) {
-            FormValidation.formValidation(
-                document.getElementById('demoForm'), {
-                    fields: {
-                        password: {
-                            validators: {
-                                required: {
-                                    message: 'The password is required'
-                                },
-                                checkStrength: {
-                                    message: 'It must be more than 8 characters long',
-                                    callback: function (input) {
-                                        return input.value.length >= 8;
-                                    },
-                                },
-                                checkUppercase: {
-                                    message: 'It must contain at least one uppercase character',
-                                    callback: function (input) {
-                                        return input.value != input.value.toLowerCase();
-                                    },
-                                },
-                                checkLowercase: {
-                                    message: 'It must contain at least one lowercase character',
-                                    callback: function (input) {
-                                        return input.value != input.value.toUpperCase();
-                                    },
-                                },
-                                checkDigit: {
-                                    message: 'It must contain at least one digit',
-                                    callback: function (input) {
-                                        return input.value.search(/[0-9]/) >= 0;
-                                    },
-                                },
-                            }
-                        },
-                    },
-                    plugins: {
-                        alias: new FormValidation.plugins.Alias({
-                            // The required validator is infact treated as notEmpty validator
-                            required: 'notEmpty',
-                            // These checkers are treated as callback validator
-                            checkStrength: 'callback',
-                            checkUppercase: 'callback',
-                            checkLowercase: 'callback',
-                            checkDigit: 'callback',
-                        }),
-                    },
+            var button = document.querySelector("#button-a");
+            button.addEventListener("click", function(e){
+                if($("#form").valid())
+                {
+                    e.preventDefault();
+                    parent.swal({
+                    title: "Good job!",
+                    text: "You have been successfully registered.",
+                    icon: "success",
+                    button: "OK",
+                    });
                 }
-            );
-        });
-    </script> -->
+            });
+    </script>
 </body>
 
 </html>
