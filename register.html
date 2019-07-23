@@ -169,10 +169,10 @@
                         Section</a></li>
             </ul>
             <ul id="nav-mobile" class="sidenav">
-                <li><a href="#" style="font-family:Montserrat;">How it Works</a></li>
-                <li><a href="#" style="font-family:Montserrat;">Post A Project</a></li>
-                <li><a href="#" style="font-family:Montserrat;">Community</a></li>
-                <li><a href="#" style="font-family:Montserrat;">FAQ Section</a></li>
+                <li><a href="#" style="font-family:Montserrat; text-decoration: none; color: black;">How it Works</a></li>
+                <li><a href="#" style="font-family:Montserrat; text-decoration: none; color: black;">Post A Project</a></li>
+                <li><a href="#" style="font-family:Montserrat; text-decoration: none; color: black;">Community</a></li>
+                <li><a href="#" style="font-family:Montserrat; text-decoration: none; color: black;">FAQ Section</a></li>
             </ul>
             <a href="#" data-target="nav-mobile" class="sidenav-trigger button-collapse"
                 style="text-decoration: none; color: teal;"><i class="material-icons">menu</i></a>
@@ -235,7 +235,7 @@
                     </div>
 
                     <!-- Sign up button -->
-                    <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-4" id="button-a"
+                    <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-4" id="register"
                         style="font-family:Montserrat; font-weight: 800; border-width: 2px;">Sign Up</button>
                     <!-- Sign up button -->
                     <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-4" type="button"
@@ -246,16 +246,16 @@
                     <p style="font-family:Montserrat; font-weight: 600;">or Sign Up with:</p>
 
                     <a type="button" class="btn-floating btn-fb btn-sm" style="margin-right: 4%;">
-                        <i class="fa fa-facebook-f" style="width: auto;line-height: 40px; color:teal;"></i>
+                        <i class="fa fa-facebook-f" style="width: auto;line-height: 38px; color:teal;"></i>
                     </a>
                     <a type="button" class="btn-floating btn-tw btn-sm" style="margin-right: 4%;">
-                        <i class="fa fa-twitter" style="width: auto;line-height: 40px; color:teal;"></i>
+                        <i class="fa fa-twitter" style="width: auto;line-height: 38px; color:teal;"></i>
                     </a>
                     <a type="button" class="btn-floating btn-li btn-sm" style="margin-right: 4%;">
-                        <i class="fa fa-linkedin" style="width: auto;line-height: 40px; color:teal;"></i>
+                        <i class="fa fa-linkedin" style="width: auto;line-height: 38px; color:teal;"></i>
                     </a>
                     <a type="button" class="btn-floating btn-git btn-sm">
-                        <i class="fa fa-github" style="width: auto;line-height: 40px; color:teal;"></i>
+                        <i class="fa fa-github" style="width: auto;line-height: 38px; color:teal;"></i>
                     </a>
 
                     <hr>
@@ -293,24 +293,24 @@
                             <div class="card-body px-lg-5 pt-0" style="padding:0px;">
 
                                 <!-- Form -->
-                                <form class="text-center" style="color: #757575;" id="demoForm1">
+                                <form class="text-center" style="color: #757575;" id="form1" novalidate="novalidate" action="submit">
 
                                     <!-- E-mail -->
                                     <div class="input-field col s12" style="padding:0px; margin:0px;">
-                                        <input id="email1" type="email" class="validate">
-                                        <label for="email1" style="font-family: Montserrat;">Email</label>
-                                    </div>
+                                            <input id="cemail" type="email" name="cemail" required="" aria-required="true">
+                                            <label for="email" style="font-family: Montserrat; display:flex;">Email<p style="line-height: 20px;">*</p></label>
+                                        </div>
 
                                     <!-- Password -->
                                     <div class="input-field col s12" style="padding:0px;">
-                                        <input id="password1" type="password" class="validate">
-                                        <label for="password1" style="font-family: Montserrat;">Password</label>
-                                    </div>
+                                            <input id="password" type="password" name="password" required="" aria-required="true">
+                                            <label for="password" style="font-family: Montserrat; display:flex;">Password<p style="line-height: 20px;">*</p></label>
+                                        </div>
 
                                     <!-- Login button -->
                                     <button
                                         class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-4"
-                                        type="submit"
+                                        type="submit" id="login"
                                         style="font-family:Montserrat; font-weight: 800; border-width: 2px;">Login</button>
 
                                     <!-- Social register -->
@@ -318,17 +318,17 @@
 
                                     <a type="button" class="btn-floating btn-fb btn-sm" style="margin-right: 4%;">
                                         <i class="fa fa-facebook-f"
-                                            style="width: auto;line-height: 40px; color:teal;"></i>
+                                            style="width: auto;line-height: 38px; color:teal;"></i>
                                     </a>
                                     <a type="button" class="btn-floating btn-tw btn-sm" style="margin-right: 4%;">
-                                        <i class="fa fa-twitter" style="width: auto;line-height: 40px; color:teal;"></i>
+                                        <i class="fa fa-twitter" style="width: auto;line-height: 38px; color:teal;"></i>
                                     </a>
                                     <a type="button" class="btn-floating btn-li btn-sm" style="margin-right: 4%;">
                                         <i class="fa fa-linkedin"
-                                            style="width: auto;line-height: 40px; color:teal;"></i>
+                                            style="width: auto;line-height: 38px; color:teal;"></i>
                                     </a>
                                     <a type="button" class="btn-floating btn-git btn-sm">
-                                        <i class="fa fa-github" style="width: auto;line-height: 40px; color:teal;"></i>
+                                        <i class="fa fa-github" style="width: auto;line-height: 38px; color:teal;"></i>
                                     </a>
                                 </form>
                                 <!-- Form -->
@@ -368,7 +368,7 @@
     <script src="js/index.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-
+    
     <script>
         $("#form").validate({
         rules: {
@@ -418,7 +418,39 @@
      });
     </script>
     <script>
-            var button = document.querySelector("#button-a");
+            $("#form1").validate({
+            rules: {
+                cemail: {
+                    required: true,
+                    email:true
+                },
+                password: {
+                    required: true,
+                    minlength: 5
+                },
+            },
+            //For custom messages
+            messages: {
+                cemail:{
+                    required: "Please Enter a Email Id."
+                },
+                password:{
+                    required: "Please Enter a Password."
+                },
+            },
+            errorElement : 'div',
+            errorPlacement: function(error, element) {
+              var placement = $(element).data('error');
+              if (placement) {
+                $(placement).append(error)
+              } else {
+                error.insertAfter(element);
+              }
+            }
+         });
+        </script>
+    <script>
+            var button = document.querySelector("#register");
             button.addEventListener("click", function(e){
                 if($("#form").valid())
                 {
@@ -432,6 +464,21 @@
                 }
             });
     </script>
+        <script>
+                var button = document.querySelector("#login");
+                button.addEventListener("click", function(e){
+                    if($("#form1").valid())
+                    {
+                        e.preventDefault();
+                        parent.swal({
+                        title: "Good job!",
+                        text: "You will be logged in when integrated to backend.",
+                        icon: "success",
+                        button: "OK",
+                        });
+                    }
+                });
+        </script>
 </body>
 
 </html>
