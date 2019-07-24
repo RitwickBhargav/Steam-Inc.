@@ -21,12 +21,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> -->
     <style>
         .btn-sm {
             background-color: seashell;
@@ -145,11 +139,11 @@
         }
 
         .error {
-      color: red;
-      text-align: left;
-      font-size: 11px;
-      font-family: Montserrat;
-   }
+            color: red;
+            text-align: left;
+            font-size: 11px;
+            font-family: Montserrat;
+        }
     </style>
 </head>
 
@@ -169,10 +163,13 @@
                         Section</a></li>
             </ul>
             <ul id="nav-mobile" class="sidenav">
-                <li><a href="#" style="font-family:Montserrat; text-decoration: none; color: black;">How it Works</a></li>
-                <li><a href="#" style="font-family:Montserrat; text-decoration: none; color: black;">Post A Project</a></li>
+                <li><a href="#" style="font-family:Montserrat; text-decoration: none; color: black;">How it Works</a>
+                </li>
+                <li><a href="#" style="font-family:Montserrat; text-decoration: none; color: black;">Post A Project</a>
+                </li>
                 <li><a href="#" style="font-family:Montserrat; text-decoration: none; color: black;">Community</a></li>
-                <li><a href="#" style="font-family:Montserrat; text-decoration: none; color: black;">FAQ Section</a></li>
+                <li><a href="#" style="font-family:Montserrat; text-decoration: none; color: black;">FAQ Section</a>
+                </li>
             </ul>
             <a href="#" data-target="nav-mobile" class="sidenav-trigger button-collapse"
                 style="text-decoration: none; color: teal;"><i class="material-icons">menu</i></a>
@@ -203,8 +200,9 @@
                         <div class="col">
                             <!-- First name -->
                             <div class="input-field col s6" style="padding:0px;">
-                                <input id="fname" type="text" name ="fname" required="" aria-required="true">
-                                <label for="fname" style="font-family: Montserrat; display:flex;">First Name<p style="line-height: 20px;">*</p></label>
+                                <input id="fname" type="text" name="fname" required="" aria-required="true">
+                                <label for="fname" style="font-family: Montserrat; display:flex;">First Name<p
+                                        style="line-height: 20px;">*</p></label>
                             </div>
                         </div>
                         <div class="col">
@@ -219,19 +217,22 @@
                     <!-- E-mail -->
                     <div class="input-field col s12" style="padding:0px; margin:0px;">
                         <input id="cemail" type="email" name="cemail" required="" aria-required="true">
-                        <label for="cemail" style="font-family: Montserrat; display:flex;">Email<p style="line-height: 20px;">*</p></label>
+                        <label for="cemail" style="font-family: Montserrat; display:flex;">Email<p
+                                style="line-height: 20px;">*</p></label>
                     </div>
 
                     <!-- Password -->
                     <div class="input-field col s12" style="padding:0px;">
                         <input id="password" type="password" name="password" required="" aria-required="true">
-                        <label for="password" style="font-family: Montserrat; display:flex;">Password<p style="line-height: 20px;">*</p></label>
+                        <label for="password" style="font-family: Montserrat; display:flex;">Password<p
+                                style="line-height: 20px;">*</p></label>
                     </div>
 
                     <!-- Confirm Password -->
                     <div class="input-field col s12" style="padding:0px;">
                         <input id="cpassword" type="password" required="" name="cpassword" aria-required="true">
-                        <label for="cpassword" style="font-family: Montserrat; display:flex;">Confirm Password<p style="line-height: 20px;">*</p></label>
+                        <label for="cpassword" style="font-family: Montserrat; display:flex;">Confirm Password<p
+                                style="line-height: 20px;">*</p></label>
                     </div>
 
                     <!-- Sign up button -->
@@ -293,19 +294,23 @@
                             <div class="card-body px-lg-5 pt-0" style="padding:0px;">
 
                                 <!-- Form -->
-                                <form class="text-center" style="color: #757575;" id="form1" novalidate="novalidate" action="submit">
+                                <form class="text-center" style="color: #757575;" id="form1" novalidate="novalidate"
+                                    action="submit">
 
                                     <!-- E-mail -->
                                     <div class="input-field col s12" style="padding:0px; margin:0px;">
-                                            <input id="cemail" type="email" name="cemail" required="" aria-required="true">
-                                            <label for="cemail" style="font-family: Montserrat; display:flex;">Email<p style="line-height: 20px;">*</p></label>
-                                        </div>
+                                        <input id="cemail" type="email" name="cemail" required="" aria-required="true">
+                                        <label for="cemail" style="font-family: Montserrat; display:flex;">Email<p
+                                                style="line-height: 20px;">*</p></label>
+                                    </div>
 
                                     <!-- Password -->
                                     <div class="input-field col s12" style="padding:0px;">
-                                            <input id="password" type="password" name="password" required="" aria-required="true">
-                                            <label for="password" style="font-family: Montserrat; display:flex;">Password<p style="line-height: 20px;">*</p></label>
-                                        </div>
+                                        <input id="password" type="password" name="password" required=""
+                                            aria-required="true">
+                                        <label for="password" style="font-family: Montserrat; display:flex;">Password<p
+                                                style="line-height: 20px;">*</p></label>
+                                    </div>
 
                                     <!-- Login button -->
                                     <button
@@ -368,61 +373,61 @@
     <script src="js/index.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-    
+
     <script>
         $("#form").validate({
-        rules: {
-            fname: {
-                required: true,
-                minlength: 5
+            rules: {
+                fname: {
+                    required: true,
+                    minlength: 5
+                },
+                cemail: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlength: 5
+                },
+                cpassword: {
+                    required: true,
+                    minlength: 5,
+                    equalTo: "#password"
+                },
             },
-            cemail: {
-                required: true,
-                email:true
+            //For custom messages
+            messages: {
+                fname: {
+                    required: "Please Enter a Name.",
+                    minlength: "Enter at least 5 characters."
+                },
+                cemail: {
+                    required: "Please Enter a Email Id."
+                },
+                password: {
+                    required: "Please Enter a Password."
+                },
+                cpassword: {
+                    required: "Please Enter a Password to confirm."
+                },
             },
-            password: {
-				required: true,
-				minlength: 5
-			},
-			cpassword: {
-				required: true,
-				minlength: 5,
-				equalTo: "#password"
-			},
-        },
-        //For custom messages
-        messages: {
-            fname:{
-                required: "Please Enter a Name.",
-                minlength: "Enter at least 5 characters."
-            },
-            cemail:{
-                required: "Please Enter a Email Id."
-            },
-            password:{
-                required: "Please Enter a Password."
-            },
-            cpassword:{
-                required: "Please Enter a Password to confirm."
-            },
-        },
-        errorElement : 'div',
-        errorPlacement: function(error, element) {
-          var placement = $(element).data('error');
-          if (placement) {
-            $(placement).append(error)
-          } else {
-            error.insertAfter(element);
-          }
-        }
-     });
+            errorElement: 'div',
+            errorPlacement: function (error, element) {
+                var placement = $(element).data('error');
+                if (placement) {
+                    $(placement).append(error)
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+        });
     </script>
     <script>
-            $("#form1").validate({
+        $("#form1").validate({
             rules: {
                 cemail: {
                     required: true,
-                    email:true
+                    email: true
                 },
                 password: {
                     required: true,
@@ -431,54 +436,52 @@
             },
             //For custom messages
             messages: {
-                cemail:{
+                cemail: {
                     required: "Please Enter a Email Id."
                 },
-                password:{
+                password: {
                     required: "Please Enter a Password."
                 },
             },
-            errorElement : 'div',
-            errorPlacement: function(error, element) {
-              var placement = $(element).data('error');
-              if (placement) {
-                $(placement).append(error)
-              } else {
-                error.insertAfter(element);
-              }
+            errorElement: 'div',
+            errorPlacement: function (error, element) {
+                var placement = $(element).data('error');
+                if (placement) {
+                    $(placement).append(error)
+                } else {
+                    error.insertAfter(element);
+                }
             }
-         });
-        </script>
+        });
+    </script>
     <script>
-            var button = document.querySelector("#register");
-            button.addEventListener("click", function(e){
-                if($("#form").valid())
-                {
-                    e.preventDefault();
-                    parent.swal({
+        var button = document.querySelector("#register");
+        button.addEventListener("click", function (e) {
+            if ($("#form").valid()) {
+                e.preventDefault();
+                parent.swal({
                     title: "Good job!",
                     text: "You have been successfully registered.",
                     icon: "success",
                     button: "OK",
-                    });
-                }
-            });
-    </script>
-        <script>
-                var button = document.querySelector("#login");
-                button.addEventListener("click", function(e){
-                    if($("#form1").valid())
-                    {
-                        e.preventDefault();
-                        parent.swal({
-                        title: "Good job!",
-                        text: "You will be logged in when integrated to backend.",
-                        icon: "success",
-                        button: "OK",
-                        });
-                    }
                 });
-        </script>
+            }
+        });
+    </script>
+    <script>
+        var button = document.querySelector("#login");
+        button.addEventListener("click", function (e) {
+            if ($("#form1").valid()) {
+                e.preventDefault();
+                parent.swal({
+                    title: "Good job!",
+                    text: "You will be logged in when integrated to backend.",
+                    icon: "success",
+                    button: "OK",
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
